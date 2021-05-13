@@ -1,4 +1,4 @@
-<script>
+<!--<script>
 	export let segment
 </script>
 
@@ -24,4 +24,5 @@
 			blog
 		</a>
   </div>
-</nav>
+</nav>-->
+
