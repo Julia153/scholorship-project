@@ -58,7 +58,7 @@
   <div id="container1-3">
     <div id="vertical-center1-3">
       <a id="emotions" href="/emotions">
-        <button class="button">Emotions</button>
+        <button class="button">Emotions<i class="far fa-smile-beam"></i></button>
       </a>
 
       <a id="places" href="/places">
