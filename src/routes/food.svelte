@@ -1,11 +1,36 @@
 <script>
-  let speech = new SpeechSynthesisUtterance();
-speech.lang = "en";
+let speech = new SpeechSynthesisUtterance();
+  speech.lang = "en";
 
-function chicken() {
-  let speech = new SpeechSynthesisUtterance('chicken');
-  window.speechSynthesis.speak(speech);
-}
+  function chicken() {
+    let speech = new SpeechSynthesisUtterance('chicken');
+    window.speechSynthesis.speak(speech);
+  }
+
+  function apple() {
+    let speech = new SpeechSynthesisUtterance('apple');
+    window.speechSynthesis.speak(speech);
+  }
+
+  function water() {
+    let speech = new SpeechSynthesisUtterance('water');
+    window.speechSynthesis.speak(speech);
+  }
+ 
+  function juice() {
+    let speech = new SpeechSynthesisUtterance('juice');
+    window.speechSynthesis.speak(speech);
+  }
+
+  function milk() {
+    let speech = new SpeechSynthesisUtterance('milk');
+    window.speechSynthesis.speak(speech);
+  }
+
+  function cracker() {
+    let speech = new SpeechSynthesisUtterance('cracker');
+    window.speechSynthesis.speak(speech);
+  }
 </script>
 
 <style>
@@ -60,17 +85,12 @@ function chicken() {
   #homeIcon {
     width: 10%;
     height: 10%;
-
   }
-
-  
-
-
 </style>
 
 <div id="body">
   <h1 class="title">Food and Drinks</h1>
-<div id="homeContainer">
+  <div id="homeContainer">
     <div id="vertical-placement-home">
       <a href="/">
         <img id="homeIcon" src="home.png" alt="home icon" />
@@ -80,18 +100,17 @@ function chicken() {
 
   <div id="container1">
     <div id="vertical-center1">
-      <button id="water" class="button">Water</button>
-      <button id="juice" class="button">Juice</button>
-      <button id="milk" class="button">Milk</button>
+      <button id="water" on:click={water} class="button">Water</button>
+      <button id="juice" on:click={juice} class="button">Juice</button>
+      <button id="milk" on:click={milk} class="button">Milk</button>
     </div>
   </div>
   <div id="container2">
     <div id="vertical-center2">
       <button id="chicken" on:click={chicken} class="button">Chicken</button>
-      <button id="apple" class="button">Apple</button>
-      <button id="cracker" class="button">Cracker</button>
+      <button id="apple" on:click={apple} class="button">Apple</button>
+      <button id="cracker" on:click={cracker} class="button">Cracker</button>
     </div>
   </div>
 
-  
 </div>
