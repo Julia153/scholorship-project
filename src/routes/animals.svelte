@@ -86,6 +86,15 @@ let speech = new SpeechSynthesisUtterance();
     width: 10%;
     height: 10%;
   }
+
+  #vertical-placement-home {
+    margin: 0;
+    position: relative;
+    left: 10px;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
 </style>
 
 <div id="body">
