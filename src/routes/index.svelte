@@ -47,26 +47,50 @@
   }
 
   #body {
-      background-color: #80CDDB;
-      height: 800px;
+    background-color: #80cddb;
+    height: 1000px;
+    margin: 0px;
+  }
+
+  #logOutLink,
+  #settingsLink {
+    color: #1d3461;
+    font-size: 30px;
+    text-decoration: underline;
+    text-decoration-line: underline;
+    margin: 10px;
   }
 </style>
 
 <div id="body">
-  <h1 class="title">Name of Website goes here</h1>
+  <h1 class="title">
+    <img
+      style="height: 20%; width: auto; "
+      src="SkyShipTitle.png"
+      alt="SkyShip title words sky ship in clouds with a rocket launching" />
+  </h1>
 
+  <a id="logOutLink" href="/login">Log Out</a>
+  <a id="settingsLink" href="/settings">Settings</a>
   <div id="container1-3">
     <div id="vertical-center1-3">
       <a id="emotions" href="/emotions">
-        <button class="button">Emotions<i class="far fa-smile-beam"></i></button>
+        <button class="button">
+        <i style="font-size: 100px;" class="far fa-smile-beam" />
+          Emotions
+          
+        </button>
       </a>
 
       <a id="places" href="/places">
-        <button class="button">Places</button>
+        <button class="button">
+          <i style="font-size: 100px;" class="fas fa-map-marker-alt" />
+          Places
+        </button>
       </a>
 
       <a id="phrases" href="/phrases">
-        <button class="button">Phrases</button>
+        <button class="button"><i style="font-size: 100px;" class="far fa-comment"></i>Phrases</button>
       </a>
     </div>
   </div>
@@ -74,11 +98,11 @@
   <div id="container3-5">
     <div id="vertical-center3-5">
       <a id="food" href="/food">
-        <button class="button">Food</button>
+        <button class="button"><i style="font-size: 100px;" class="fas fa-apple-alt"></i>Food</button>
       </a>
 
       <a id="animals" href="/animals">
-        <button class="button">Animals</button>
+        <button class="button"><i style="font-size: 100px;" class="fas fa-dog"></i>Animals</button>
       </a>
     </div>
   </div>

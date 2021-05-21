@@ -93,6 +93,10 @@ let speech = new SpeechSynthesisUtterance();
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
+
+  i {
+    font-size: 50px;
+  }
   
 </style>
 
@@ -108,16 +112,16 @@ let speech = new SpeechSynthesisUtterance();
 
   <div id="container1">
     <div id="vertical-center1">
-      <button id="water" on:click={tired} class="button">I am tired</button>
-      <button id="juice" on:click={thirsty} class="button">I am thirsty</button>
-      <button id="chicken" on:click={hungry} class="button">I am hungry</button>
+      <button id="water" on:click={tired} class="button"><i class="fas fa-bed"></i>I am tired</button>
+      <button id="juice" on:click={thirsty} class="button"><i class="fas fa-glass-whiskey"></i>I am thirsty</button>
+      <button id="chicken" on:click={hungry} class="button"><i class="fas fa-utensils"></i>I am hungry</button>
     </div>
   </div>
   <div id="container2">
     <div id="vertical-center2">
-      <button id="milk" on:click={help} class="button">I need help</button>
-      <button id="apple" on:click={hurt} class="button">I am hurt</button>
-      <button id="cracker" on:click={bathroom} class="button">I need to use the bathroom</button>
+      <button id="milk" on:click={help} class="button"><i class="far fa-life-ring"></i>I need help</button>
+      <button id="apple" on:click={hurt} class="button"><i class="fas fa-ambulance"></i>I am hurt</button>
+      <button id="cracker" on:click={bathroom} class="button"><i class="fas fa-restroom"></i>I need to use the bathroom</button>
     </div>
   </div>
 

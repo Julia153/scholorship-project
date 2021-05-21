@@ -109,16 +109,16 @@ let speech = new SpeechSynthesisUtterance();
 
   <div id="container1">
     <div id="vertical-center1">
-      <button id="water" on:click={home} class="button">Home</button>
-      <button id="juice" on:click={park} class="button">Park</button>
-      <button id="milk" on:click={school} class="button">School</button>
+      <button id="water" on:click={home} class="button"><i style="font-size: 50px;" class="fas fa-house-user"></i>Home</button>
+      <button id="juice" on:click={park} class="button"><i style="font-size: 50px;" class="fas fa-tree"></i>Park</button>
+      <button id="milk" on:click={school} class="button"><i style="font-size: 50px;" class="fas fa-school"></i>School</button>
     </div>
   </div>
   <div id="container2">
     <div id="vertical-center2">
-      <button id="chicken" on:click={grandparents} class="button">Grandparents house</button>
-      <button id="apple" on:click={museum} class="button">Museum</button>
-      <button id="cracker" on:click={pool} class="button">Pool</button>
+      <button id="chicken" on:click={grandparents} class="button"><i style="font-size: 50px;" class="fas fa-person-booth"></i>Grandparents house</button>
+      <button id="apple" on:click={museum} class="button"><i style="font-size: 50px;" class="far fa-building"></i>Museum</button>
+      <button id="cracker" on:click={pool} class="button"><i style="font-size: 50px;"class="fas fa-swimming-pool"></i>Pool</button>
     </div>
   </div>
 

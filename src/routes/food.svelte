@@ -95,6 +95,9 @@ let speech = new SpeechSynthesisUtterance();
     transform: translateY(-50%);
   }
   
+  i {
+    font-size: 50px;
+  }
 </style>
 
 <div id="body">
@@ -109,16 +112,16 @@ let speech = new SpeechSynthesisUtterance();
 
   <div id="container1">
     <div id="vertical-center1">
-      <button id="water" on:click={water} class="button">Water</button>
-      <button id="juice" on:click={juice} class="button">Juice</button>
-      <button id="milk" on:click={milk} class="button">Milk</button>
+      <button id="water" on:click={water} class="button"><img style="height: 50%; width: auto;"src="water-bottle.png" alt="water bottle" Water>Water</button>
+      <button id="juice" on:click={juice} class="button"><img style="height: 50%; width: auto;"src="juice.png" alt="juice">Juice</button>
+      <button id="milk" on:click={milk} class="button"><img style="height: 50%; width: auto;" src="milk.png" alt="milk">Milk</button>
     </div>
   </div>
   <div id="container2">
     <div id="vertical-center2">
-      <button id="chicken" on:click={chicken} class="button">Chicken</button>
-      <button id="apple" on:click={apple} class="button">Apple</button>
-      <button id="cracker" on:click={cracker} class="button">Cracker</button>
+      <button id="chicken" on:click={chicken} class="button"><i class="fas fa-drumstick-bite"></i>Chicken</button>
+      <button id="apple" on:click={apple} class="button"><i class="fas fa-apple-alt"></i>Apple</button>
+      <button id="cracker" on:click={cracker} class="button"><img style="height: 50%; width: auto;"src="cracker.png" alt="cracker">Cracker</button>
     </div>
   </div>
 
