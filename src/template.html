@@ -17,7 +17,30 @@
 
 <body>
     <div id='sapper'>%sapper.html%</div>
-    %sapper.scripts%
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyB-qdG6j6fDvmbwd5yAO9kh0EFtMTg-B1g",
+            authDomain: "skyship-communication.firebaseapp.com",
+            projectId: "skyship-communication",
+            storageBucket: "skyship-communication.appspot.com",
+            messagingSenderId: "642020364371",
+            appId: "1:642020364371:web:1ab67266b66b98128cf6a6"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // create the database variable so that the rest of the app can use it
+        const db = firebase.firestore()
+    </script>
+
+
 
     <footer class="footer">
         <div class="content has-text-centered">
@@ -28,6 +51,9 @@
             <a href="/bibliography">Bibliography</a>
         </div>
     </footer>
+    %sapper.scripts%
+
+
 </body>
 
 </html>

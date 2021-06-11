@@ -9,7 +9,10 @@
   },
   "dependencies": {
     "compression": "^1.7.1",
+    "firebase": "^8.6.4",
     "polka": "next",
+    "rxfire": "^4.0.0",
+    "rxjs": "^7.1.0",
     "sirv": "^0.4.0"
   },
   "devDependencies": {

@@ -24,7 +24,7 @@ h1 {
 <h1 class="title">Settings</h1>
 <div id="homeContainer">
     <div id="vertical-placement-home">
-      <a href="/">
+      <a href="/home">
         <img id="homeIcon" src="home.png" alt="home icon" />
       </a>
     </div>

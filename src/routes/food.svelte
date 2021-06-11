@@ -1,44 +1,54 @@
 <script>
-let speech = new SpeechSynthesisUtterance();
+  //accessing the api library
+  let speech = new SpeechSynthesisUtterance();
   speech.lang = "en";
 
-  function chicken() {
-    let speech = new SpeechSynthesisUtterance('chicken');
+  //saying pizza
+
+  function pizza() {
+    let speech = new SpeechSynthesisUtterance("pizza");
     window.speechSynthesis.speak(speech);
   }
 
+  //saying apple
   function apple() {
-    let speech = new SpeechSynthesisUtterance('apple');
+    let speech = new SpeechSynthesisUtterance("apple");
     window.speechSynthesis.speak(speech);
   }
 
+  //saying water
   function water() {
-    let speech = new SpeechSynthesisUtterance('water');
-    window.speechSynthesis.speak(speech);
-  }
- 
-  function juice() {
-    let speech = new SpeechSynthesisUtterance('juice');
+    let speech = new SpeechSynthesisUtterance("water");
     window.speechSynthesis.speak(speech);
   }
 
-  function milk() {
-    let speech = new SpeechSynthesisUtterance('milk');
+  //saying carrot
+  function carrot() {
+    let speech = new SpeechSynthesisUtterance("carrot");
     window.speechSynthesis.speak(speech);
   }
 
-  function cracker() {
-    let speech = new SpeechSynthesisUtterance('cracker');
+  //saying egg
+  function egg() {
+    let speech = new SpeechSynthesisUtterance("egg");
+    window.speechSynthesis.speak(speech);
+  }
+
+  //saying cake
+  function cake() {
+    let speech = new SpeechSynthesisUtterance("cake");
     window.speechSynthesis.speak(speech);
   }
 </script>
 
 <style>
+  /* setting height of page and background color*/
   #body {
     background-color: #80cddb;
     height: 800px;
   }
 
+  /* editing the button properties from the bulma button class*/
   .button {
     width: 300px;
     height: 300px;
@@ -48,45 +58,24 @@ let speech = new SpeechSynthesisUtterance();
     border-color: #1d3461;
     border-radius: 10px;
     background-color: #f5f6f4;
+    display: flex;
+    flex-direction: column;
   }
 
+  /* making the title image centered*/
   .title {
     text-align: center;
   }
 
-  #container1 {
-    height: 200px;
-    position: relative;
+  /* centering the word buttons*/
+  #container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 100px;
   }
 
-  #vertical-center1 {
-    margin: 0;
-    position: absolute;
-    right: 10%;
-    top: 80%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-
-  #container2 {
-    height: 200px;
-    position: relative;
-  }
-
-  #vertical-center2 {
-    margin: 0;
-    position: absolute;
-    right: 10%;
-    top: 150%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-
-  #homeIcon {
-    width: 10%;
-    height: 10%;
-  }
-
+  /* placement of the home button*/
   #vertical-placement-home {
     margin: 0;
     position: relative;
@@ -94,35 +83,61 @@ let speech = new SpeechSynthesisUtterance();
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
-  
+
   i {
-    font-size: 50px;
+    font-size: 100px;
+    color: black;
   }
+
 </style>
 
 <div id="body">
+  <!--title-->
   <h1 class="title">Food and Drinks</h1>
+  <!-- home button -->
   <div id="homeContainer">
     <div id="vertical-placement-home">
-      <a href="/">
-        <img id="homeIcon" src="home.png" alt="home icon" />
+      <a href="/home">
+        <i style=" font-size: 100px; color: black;" class="fas fa-home" />
       </a>
     </div>
   </div>
 
-  <div id="container1">
-    <div id="vertical-center1">
-      <button id="water" on:click={water} class="button"><img style="height: 50%; width: auto;"src="water-bottle.png" alt="water bottle" Water>Water</button>
-      <button id="juice" on:click={juice} class="button"><img style="height: 50%; width: auto;"src="juice.png" alt="juice">Juice</button>
-      <button id="milk" on:click={milk} class="button"><img style="height: 50%; width: auto;" src="milk.png" alt="milk">Milk</button>
-    </div>
-  </div>
-  <div id="container2">
-    <div id="vertical-center2">
-      <button id="chicken" on:click={chicken} class="button"><i class="fas fa-drumstick-bite"></i>Chicken</button>
-      <button id="apple" on:click={apple} class="button"><i class="fas fa-apple-alt"></i>Apple</button>
-      <button id="cracker" on:click={cracker} class="button"><img style="height: 50%; width: auto;"src="cracker.png" alt="cracker">Cracker</button>
-    </div>
+  <div id="container">
+    <!--water button-->
+    <button on:click={water} class="button">
+      <i class="fas fa-tint"></i>
+      Water
+    </button>
+    <!--pizza button-->
+    <button on:click={pizza} class="button">
+     <i class="fas fa-pizza-slice"></i>
+      Pizza
+    </button>
+    <!--egg button-->
+    <button on:click={egg} class="button">
+      <i class="fas fa-egg"></i>
+      Egg
+    </button>
+
+    <!--carrot button-->
+    <button on:click={carrot} class="button">
+      <i class="fas fa-carrot"></i>
+      Carrot
+    </button>
+
+    <!--apple button-->
+    <button on:click={apple} class="button">
+      <i class="fas fa-apple-alt"></i>
+      Apple
+    </button>
+
+    <!--cake button-->
+    <button id="cake" on:click={cake} class="button">
+      <i class="fas fa-birthday-cake"></i>
+      Cake
+    </button>
+
   </div>
 
 </div>
