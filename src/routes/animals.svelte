@@ -1,42 +1,97 @@
 <script>
+  let catCounter = 0;
+  let dogCounter = 0;
+  let frogCounter = 0;
+  let horseCounter = 0;
+  let fishCounter = 0;
+  let birdCounter = 0;
   //Accessing the api text to speech api library
   let speech = new SpeechSynthesisUtterance();
   speech.lang = "en";
 
   //saying frog
   function frog() {
-    let speech = new SpeechSynthesisUtterance("frog");
-    window.speechSynthesis.speak(speech);
+    frogCounter++;
+    if (frogCounter <= 2) {
+      let speech = new SpeechSynthesisUtterance("frog");
+      window.speechSynthesis.speak(speech);
+    } else {
+      alert(
+        "Please only press the button once, sometimes a takes a second to speak"
+      );
+      frogCounter = 0;
+    }
   }
 
   //saying bird
   function bird() {
-    let speech = new SpeechSynthesisUtterance("bird");
-    window.speechSynthesis.speak(speech);
+    birdCounter++;
+    if (birdCounter <= 2) {
+      let speech = new SpeechSynthesisUtterance("bird");
+      window.speechSynthesis.speak(speech);
+    } else {
+      alert(
+        "Please only press the button once, sometimes a takes a second to speak"
+      );
+      birdCounter = 0;
+    }
+    
   }
 
   //saying dog
   function dog() {
-    let speech = new SpeechSynthesisUtterance("Dog");
-    window.speechSynthesis.speak(speech);
+    dogCounter++;
+    if (dogCounter <= 2) {
+      let speech = new SpeechSynthesisUtterance("Dog");
+      window.speechSynthesis.speak(speech);
+    } else {
+      alert(
+        "Please only press the button once, sometimes a takes a second to speak"
+      );
+      dogCounter = 0;
+    }
   }
 
   //saying cat
   function cat() {
-    let speech = new SpeechSynthesisUtterance("Cat");
-    window.speechSynthesis.speak(speech);
+    catCounter++;
+    if (catCounter <= 2) {
+      let speech = new SpeechSynthesisUtterance("Cat");
+      window.speechSynthesis.speak(speech);
+    } else {
+      alert(
+        "Please only press the button once, sometimes a takes a second to speak"
+      );
+      catCounter = 0;
+    }
   }
 
   //saying fish
   function fish() {
-    let speech = new SpeechSynthesisUtterance("Fish");
-    window.speechSynthesis.speak(speech);
+    fishCounter++;
+    if (fishCounter <= 2) {
+      let speech = new SpeechSynthesisUtterance("Fish");
+      window.speechSynthesis.speak(speech);
+    } else {
+      alert(
+        "Please only press the button once, sometimes a takes a second to speak"
+      );
+      fishCounter = 0;
+    }
   }
 
   //saying horse
   function horse() {
-    let speech = new SpeechSynthesisUtterance("Horse");
-    window.speechSynthesis.speak(speech);
+    horseCounter++;
+    if (horseCounter <= 2) {
+      let speech = new SpeechSynthesisUtterance("Horse");
+      window.speechSynthesis.speak(speech);
+    } else {
+      alert(
+        "Please only press the button once, sometimes a takes a second to speak"
+      );
+      horseCounter = 0;
+    }
   }
 </script>
 
@@ -57,11 +112,6 @@
     border-color: #1d3461;
     border-radius: 10px;
     background-color: #f5f6f4;
-  }
-
-  /* making the title image centered*/
-  .title {
-    text-align: center;
   }
 
   /* centering the word buttons*/
@@ -90,11 +140,21 @@
     font-size: 100px;
     color: black;
   }
+
+  img {
+    margin-left: 400px;
+    height: 30%;
+    width: auto;
+  }
+
+  #body {
+    height: 1100px;
+  }
 </style>
 
 <div id="body">
   <!--Title-->
-  <h1 class="title">Animals</h1>
+  <img src="animalLogo.png" alt="animal category logo" />
   <!--Home button-->
   <div id="homeContainer">
     <div id="vertical-placement-home">

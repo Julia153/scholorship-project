@@ -25,6 +25,7 @@
     // get the data from the person document
     person = personDoc.data();
   }
+  
 </script>
 
 <style>
@@ -79,6 +80,7 @@
 <a href="/home">
   <button id="noLogIn" class="button">Use without logging in</button>
 </a>
+
 
 <!-- this is just a section to make the page look nice -->
 <section class="content section">

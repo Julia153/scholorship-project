@@ -15,9 +15,10 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig)
 
-const auth = firebase.auth()
-const provider = new firebase.auth.GoogleAuthProvider()
-const db = firebase.firestore()
+export const auth = firebase.auth();
+export const googleProvider = new firebase.auth.GoogleAuthProvider();
+
+export const db = firebase.firestore();
 
 /* Signup
  * Logs the user into the provider with a pop-up, then
@@ -28,6 +29,7 @@ const db = firebase.firestore()
  * Signin: https://firebase.google.com/docs/auth/web/google-signin#handle_the_sign-in_flow_with_the_firebase_sdk
  * Writing to database: https://firebase.google.com/docs/firestore/manage-data/add-data#add_a_document
  */
+
 export async function signup() {
     console.log(`Signing up...`)
 

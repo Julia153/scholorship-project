@@ -52,10 +52,24 @@
     flex-direction: column;
   }
 
-  i {
-    color: black;
+  #animalsIcon {
+    margin-left: 30px;
   }
 
+  #emotionsIcon {
+    margin-right: 40px;
+    margin-top: 10px;
+  }
+
+  #placesIcon {
+    margin-left: 20px;
+  }
+
+  #foodIcon {
+    margin-left: 20px;
+    width: 80%;
+    height: auto;
+  }
 
 </style>
 
@@ -64,8 +78,8 @@
   <!--Setting my title to be my SkyShip logo-->
   <h1 class="title">
     <img
-      style="height: 20%; width: auto; "
-      src="SkyShipTitle.png"
+      style="height: 30%; width: auto; margin: 0px;"
+      src="SkyShipLogo.png"
       alt="SkyShip title words sky ship in clouds with a rocket launching" />
   </h1>
   <!--Button to logout-->
@@ -78,21 +92,21 @@
 
     <a id="emotions" href="/emotions">
       <div class="button">
-        <i style="font-size: 100px;" class="far fa-smile-beam" />
+        <img id="emotionsIcon" src="emotions.png" alt="emotions icon">
         Emotions
       </div>
     </a>
     <!--Button for places-->
     <a id="places" href="/places">
       <div class="button">
-        <i style="font-size: 100px;" class="fas fa-map-marker-alt" />
+        <img id="placesIcon" src="places.png" alt="Places icon">
         Places
       </div>
     </a>
     <!--Button for phrases-->
     <a id="phrases" href="/phrases">
       <div class="button">
-        <i style="font-size: 100px;" class="far fa-comment" />
+        <img src="phrases.png" alt="phrases icon">
         Phrases
       </div>
     </a>
@@ -103,14 +117,14 @@
 
       <a id="food" href="/food">
         <div class="button">
-          <i style="font-size: 100px;" class="fas fa-apple-alt" />
+          <img id="foodIcon" src="food.png" alt="food icon">
           Food
         </div>
       </a>
       <!--button for animals-->
       <a id="animals" href="/animals">
         <div class="button">
-          <i style="font-size: 100px; " class="fas fa-dog" />
+          <img id="animalsIcon" src="animals.png" alt="animals icon">
           Animals
         </div>
       </a>

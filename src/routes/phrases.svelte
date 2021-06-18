@@ -1,42 +1,91 @@
 <script>
+  let hurtCounter = 0;
+  let tiredCounter = 0;
+  let thirstyCounter = 0;
+  let bathroomCounter = 0;
+  let helpCounter = 0;
+  let hungryCounter = 0;
   //accessing the api library
   let speech = new SpeechSynthesisUtterance();
   speech.lang = "en";
 
   //saying i am hurt
   function hurt() {
-    let speech = new SpeechSynthesisUtterance("I am hurt");
-    window.speechSynthesis.speak(speech);
+    hurtCounter++;
+    if (hurtCounter <= 2) {
+      let speech = new SpeechSynthesisUtterance("I am hurt");
+      window.speechSynthesis.speak(speech);
+    } else {
+      alert("Please only press the word buttons once, sometimes they take a second to speak")
+      hurtCounter = 0
+    }
   }
 
   //saying i need to use the bathroom
   function bathroom() {
-    let speech = new SpeechSynthesisUtterance("I need to use the bathroom");
+    bathroomCounter++
+    if (bathroomCounter <= 2) {
+let speech = new SpeechSynthesisUtterance("I need to use the bathroom");
     window.speechSynthesis.speak(speech);
+    } else {
+      alert("Please only press the word buttons once, sometimes they take a second to speak");
+      bathroomCounter = 0;
+    }
+    
   }
 
   //saying i need help
   function help() {
-    let speech = new SpeechSynthesisUtterance("I need help");
+    helpCounter++
+    if (helpCounter <= 2) {
+let speech = new SpeechSynthesisUtterance("I need help");
     window.speechSynthesis.speak(speech);
+    } else {
+       alert("Please only press the word buttons once, sometimes they take a second to speak");
+       helpCounter = 0;
+    }
+    
   }
 
   //saying i am hungry
   function hungry() {
-    let speech = new SpeechSynthesisUtterance("I am hungry");
+    hungryCounter++
+    if (hungryCounter <= 2) {
+      let speech = new SpeechSynthesisUtterance("I am hungry");
     window.speechSynthesis.speak(speech);
+    } else {
+      alert("Please only press the word buttons once, sometimes they take a second to speak");
+      hungryCounter = 0;
+    }
+    
   }
 
   //saying i am thirsty
   function thirsty() {
-    let speech = new SpeechSynthesisUtterance("I am thirsty");
+    thirstyCounter ++
+
+    if (thirstyCounter <= 2) {
+      let speech = new SpeechSynthesisUtterance("I am thirsty");
     window.speechSynthesis.speak(speech);
+    } else {
+      alert("Please only press the word buttons once, sometimes they take a second to speak");
+      thirstyCounter = 0;
+    }
+    
   }
 
   //saying i am tired
   function tired() {
-    let speech = new SpeechSynthesisUtterance("I am tired");
+    tiredCounter++;
+
+    if (tiredCounter <= 2) {
+      let speech = new SpeechSynthesisUtterance("I am tired");
     window.speechSynthesis.speak(speech);
+    } else {
+      alert("Please only press the word buttons once, sometimes they take a second to speak");
+      tiredCounter = 0;
+    }
+    
   }
 </script>
 
@@ -61,9 +110,14 @@
     flex-direction: column;
   }
 
-  /* making the title image centered*/
-  .title {
-    text-align: center;
+  img {
+    margin-left: 400px;
+    height: 30%;
+    width: auto;
+  }
+
+  #body {
+    height: 1100px;
   }
 
   /* centering the word buttons*/
@@ -92,7 +146,7 @@
 
 <div id="body">
   <!--Title-->
-  <h1 class="title">Phrases</h1>
+  <img src="phraseLogo.png" alt="phrases logo" />
   <!--linking the home button-->
   <div id="homeContainer">
     <div id="vertical-placement-home">

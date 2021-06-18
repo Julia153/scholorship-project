@@ -1,43 +1,100 @@
 <script>
+  let homePlaceCounter = 0;
+  let parkCounter = 0;
+  let schoolCounter = 0;
+  let playgroundCounter = 0;
+  let zooCounter = 0;
+  let poolCounter = 0;
+
   //accessing the api library
   let speech = new SpeechSynthesisUtterance();
   speech.lang = "en";
 
   //saying school
   function school() {
-    let speech = new SpeechSynthesisUtterance("school");
-    window.speechSynthesis.speak(speech);
+    schoolCounter++;
+    if (schoolCounter <= 2) {
+      let speech = new SpeechSynthesisUtterance("school");
+      window.speechSynthesis.speak(speech);
+    } else {
+      alert(
+        "Please only press the button once, sometimes it takes a second for the word to speak"
+      );
+      schoolCounter = 0;
+    }
   }
 
   //saying zoo
   function zoo() {
-    let speech = new SpeechSynthesisUtterance("zoo");
-    window.speechSynthesis.speak(speech);
+    zooCounter++;
+    if (zooCounter <= 2) {
+      let speech = new SpeechSynthesisUtterance("zoo");
+      window.speechSynthesis.speak(speech);
+    } else {
+      alert(
+        "Please only press the button once, sometimes it takes a second for the word to speak"
+      );
+      zooCounter = 0;
+    }
   }
 
   //saying pool
 
   function pool() {
-    let speech = new SpeechSynthesisUtterance("pool");
-    window.speechSynthesis.speak(speech);
+    poolCounter ++
+    if (poolCounter <= 2) {
+      let speech = new SpeechSynthesisUtterance("pool");
+      window.speechSynthesis.speak(speech);
+    } else {
+      alert(
+        "Please only press the button once, sometimes it takes a second for the word to speak"
+      );
+      poolCounter = 0;
+    }
   }
 
   //saying playground
   function playground() {
-    let speech = new SpeechSynthesisUtterance("playground");
-    window.speechSynthesis.speak(speech);
+    playgroundCounter++;
+    if (playgroundCounter <= 2) {
+      let speech = new SpeechSynthesisUtterance("playground");
+      window.speechSynthesis.speak(speech);
+    } else {
+      alert(
+        "Please only press the button once, sometimes it takes a second for the word to speak"
+      );
+      playgroundCounter = 0;
+    }
   }
 
   //saying home
-  function home() {
-    let speech = new SpeechSynthesisUtterance("home");
+  function homePlace() {
+    homePlaceCounter++
+    if (homePlaceCounter <= 2) {
+      let speech = new SpeechSynthesisUtterance("home");
     window.speechSynthesis.speak(speech);
+    } else {
+      alert(
+        "Please only press the button once, sometimes it takes a second for the word to speak"
+      );
+      homePlaceCounter = 0;
+    }
+    
   }
 
   //saying park
   function park() {
-    let speech = new SpeechSynthesisUtterance("park");
+    parkCounter++
+    if (parkCounter <= 2) {
+let speech = new SpeechSynthesisUtterance("park");
     window.speechSynthesis.speak(speech);
+    } else {
+      alert(
+        "Please only press the button once, sometimes it takes a second for the word to speak"
+      );
+      parkCounter = 0;
+    }
+    
   }
 </script>
 
@@ -62,9 +119,8 @@
     flex-direction: column;
   }
 
-  /* making the title image centered*/
-  .title {
-    text-align: center;
+  #body {
+    height: 1100px;
   }
 
   /* centering the word buttons*/
@@ -84,11 +140,6 @@
     transform: translateY(-50%);
   }
 
-  img {
-    height: 50%;
-    width: auto;
-  }
-
   i {
     font-size: 100px;
     color: black;
@@ -97,20 +148,23 @@
 
 <div id="body">
   <!--title-->
-  <h1 class="title">Places</h1>
+  <img
+    style="margin-left: 400px; height: 30%; width: auto;"
+    src="placeLogo.png"
+    alt="places logo" />
   <!--home button-->
   <div id="homeContainer">
     <div id="vertical-placement-home">
       <a href="/home">
-        <i style="font-size: 100px; color: black;" class="fas fa-home"></i>
+        <i style="font-size: 100px; color: black;" class="fas fa-home" />
       </a>
     </div>
   </div>
 
   <div id="container">
     <!--home button-->
-    <div on:click={home} class="button">
-      <i  id="homePlace" class="fas fa-home"></i>
+    <div on:click={homePlace} class="button">
+      <i id="homePlace" class="fas fa-home" />
       Home
     </div>
     <!--park button-->
@@ -125,12 +179,12 @@
     </div>
     <!--playground button-->
     <div on:click={playground} class="button">
-      <img src="swing.png" alt="swing">
+      <img style="height: 50%; width: auto;" src="swing.png" alt="swing" />
       Playground
     </div>
     <!--zoo button-->
     <div on:click={zoo} class="button">
-      <i class="fas fa-hippo"></i>
+      <i class="fas fa-hippo" />
       Zoo
     </div>
     <!--pool buttonÏ-->
